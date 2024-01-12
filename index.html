@@ -1,47 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-<title> Bilka </title>
+<meta charset="UTF-8">
+<title>Bilka</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #FF6000;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: #ffa200;
+    z-index: 10;
+  }
+
+  .container {
+    padding: 50px;
+    border: 1px solid black;
+    margin: 10% auto;
+    max-width: 550px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-50px); /* slight upward lift effect */
+    transition: transform 0.3s ease; /* Animated effect */
+  }
+
+  .container:hover {
+    transform: translateY(-60px); /* Enhanced effect on hover */
+  }
+
+  h1, p {
+    text-align: center;
+    color: #333;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  hr {
+    width: 40%;
+    margin: 20px auto;
+  }
+
+  img.header-logo {
+    display: block;
+    margin: 20px auto;
+    width: 210px;
+    height: 150px;
+  }
+
+  #contact {
+    text-align: center;
+    color: black;
+    padding: 20px;
+  }
+
+  input[type="text"], input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+  }
+
+  #contact button {
+    background-color: #ffa200;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+  }
+
+  #contact button:hover {
+    background-color: #e68a00;
+  }
+
+  .social-media {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+
+  .social-icon:hover {
+    color: #fff;
+  }
+</style>
 </head>
-<BODY style="background-color: #FF6000;">
-<div id="container_1" style="padding: 50px; border: 1px solid black; margin: 10%; max-width: 50%; max-height: 50%; position: sticky; left: 20%; top: 20%; background-color: white;"> 
-<hr style="width: 40%;"/>
-<br/> 
-<IMG src="header.png" style="display: block; margin-left: auto; margin-right: auto; align: center; width: 210px; height: 150px;">
-<br/>
-<br/>
-<p style="text-align: center; font-family: sans-serif; color: black;"> B I L K A </p>
-<hr style="width: 40%;"/>   
-<br/>
-<br/>
-<br/>
-<p style="text-align: center; font-family: sans-serif; color: black;"> Bilka ist ein Schulprojekt im Rahmen von YES Switzerland </p>
-<br/>   
-<p style="text-align: center; font-family: sans-serif; color: black;"> Für mehr Informationen stehen wir gerne zur Verfügung</p>
- 
-<br/>
-<br/>
-
-<DIV id ="contact" style="background-color:white; text-color: black">
-<p>Kontaktieren Sie uns</p>
-
-<p>Name</p><input/>
-<p>e-Mail addresse</p><input/>
-<p>Nachricht</p><input/>
-<button id="send">Senden</button>
-
-</DIV>
-    
-    
-    
-<p style="text-align: center; font-family: sans-serif; color: black;"> Folgen Sie uns</p>   
-    
-<table style="margin-left: auto; margin-right: auto; ont-family: sans-serif; color: black;">
-  <tr>
-    <th>Instagram</th>
-    
-<br/>
-<br/>
+<body>
+<div class="navbar"></div>
+<div id="container_1" class="container">
+  <hr/>
+  <img src="header.png" alt="Bilka Logo" class="header-logo">
+  <h1>BILKA</h1>
+  <hr/>
+  <p>Bilka ist ein Schulprojekt im Rahmen von YES Switzerland</p>
+  <p>Für mehr Informationen stehen wir gerne zur Verfügung</p>
+  <div id="contact">
+    <h2>Kontaktieren Sie uns</h2>
+    <label for="name">Name</label><br>
+    <input type="text" id="name"><br>
+    <label for="email">E-Mail-Adresse</label><br>
+    <input type="email" id="email"><br>
+    <label for="message">Nachricht</label><br>
+    <input type="text" id="message"><br>
+    <button id="send">Senden</button>
+  </div>
+  <div class="social-media">
+    <p>Folgen Sie uns</p>
+    <a href="https://www.instagram.com" target="_blank" class="social-icon">Instagram</a>
+  </div>
 </div>
-</BODY>
-<html>
+</body>
+</html>
